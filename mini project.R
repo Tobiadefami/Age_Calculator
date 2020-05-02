@@ -1,11 +1,7 @@
 library(lubridate)
 
-make_date_age <- function(year, month, day){
-  make_date(year, month, day)
-}
-
 age_calculator <- function(x, y, z){
-  a = make_date_age(x, y, z)
+  a = make_date(x, y, z)
   actual = today() - a
   print(as.duration(actual))
 }
